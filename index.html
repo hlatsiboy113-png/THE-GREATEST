@@ -1,171 +1,209 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Electric Cars</title>
-  <link rel="stylesheet" href="styles.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SELSA Clone</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  z-index: 1000;
+}
+
+/* LEFT LOGO */
+.logo {
+  font-weight: bold;
+  letter-spacing: 6px;
+  font-size: 14px;
+}
+
+/* CENTER MENU */
+.menu {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
+/* RIGHT ICONS */
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/Model-S-Hero") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* MODEL TEXT */
+.hero h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* ================= ARROWS ================= */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+/* ================= DOTS ================= */
+.dots {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.dots span:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+/* ================= MODELS ================= */
+.models {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.models div {
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.models div:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Electric</div>
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="logo">S E L S A</div>
 
-    <ul class="nav-links">
-      <li><a href="#">Models</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
-  </nav>
+  <div class="menu">
+    <a href="#">Vehicles</a>
+    <a href="#">Energy</a>
+    <a href="#">Charging</a>
+    <a href="#">Discover</a>
+    <a href="#">Shop</a>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
+  <div class="icons">
+    <span>?</span>
+    <span>🌍</span>
+    <span>👤</span>
+  </div>
+</nav>
 
-    <div class="hero-content">
-      <h1>Drive the Future</h1>
-      <p>Electric performance redefined</p>
+<!-- ================= HERO ================= -->
+<section class="hero">
 
-      <div class="buttons">
-        <button class="btn primary">Order Now</button>
-        <button class="btn secondary">Learn More</button>
-      </div>
-    </div>
-  </section>
+  <div class="arrow left">&#10094;</div>
+  <div class="arrow right">&#10095;</div>
+
+  <h1>Model S</h1>
+  <p>From £XX,XXX</p>
 
   <!-- MODELS -->
-  <section class="models">
-    <h2>Our Models</h2>
+  <div class="models">
+    <div>S</div>
+    <div>3</div>
+    <div>X</div>
+    <div>Y</div>
+  </div>
 
-    <div class="model-grid">
+  <!-- DOTS -->
+  <div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-      <div class="card">
-        <img src="assets/model-s.jpg" alt="Model S">
-        <h3>Model S</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-3.jpg" alt="Model 3">
-        <h3>Model 3</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-x.jpg" alt="Model X">
-        <h3>Model X</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-y.jpg" alt="Model Y">
-        <h3>Model Y</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Legal</a>
-      <a href="#">Contact</a>
-      <a href="#">Support</a>
-    </div>
-
-    <p>© 2026 Electric Cars</p>
-  </footer>
+</section>
 
 </body>
 </html>
-=======
-=======
->>>>>>> 0ed320a (update navbar brand)
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electric Cars Landing Page</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">BrandName</div>
-
-    <ul class="nav-links">
-      <li><a href="#">Models</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
-  </nav>
-
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Your Main Headline Here</h1>
-      <p>Your short tagline goes here</p>
-
-      <div class="buttons">
-        <button class="btn primary">Order Now</button>
-        <button class="btn secondary">Learn More</button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- MODELS SECTION -->
-  <section class="models">
-    <h2>Our Models</h2>
-
-    <div class="model-grid">
-
-      <div class="card">
-        <img src="assets/model-s.jpg" alt="">
-        <h3>Model S</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-3.jpg" alt="">
-        <h3>Model 3</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-x.jpg" alt="">
-        <h3>Model X</h3>
-      </div>
-
-      <div class="card">
-        <img src="assets/model-y.jpg" alt="">
-        <h3>Model Y</h3>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Electric Cars</p>
-
-    <ul>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Legal</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </footer>
-
-</body>
-<<<<<<< HEAD
-</html>
->>>>>>> 0ed320a (update navbar brand)
-=======
-</html>
->>>>>>> 0ed320a (update navbar brand)
